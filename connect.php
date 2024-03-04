@@ -1,19 +1,16 @@
 <?php
-    $FullName = $_POST['FullName'];
-    $EmailAddress = $_POST['EmailAddress'];
-    $Mobilenumber = $_POST['Mobilenumber'];
-    $EmailSubject = $_POST['EmailSubject'];
-    $YourMessage = $_POST['YourMessage'];
+    $Username = $_POST['Username'];
+    $password = $_POST['Password'];
 
     // Database connection
-    $conn = new mysqli('localhost', 'u115385445_root', 'o!:wRNK7E6', 'u115385445_Rohitt');
+    $conn = new mysqli('localhost', 'u115385445_root', 'o!:wRNK7E6', 'login');
     if ($conn->connect_error) {
         echo "$conn->connect_error";
         die("Connection Failed : " . $conn->connect_error);
     } else {
         // Prepare and bind the statement
-        $stmt = $conn->prepare("INSERT INTO Contact(FullName, EmailAddress, Mobilenumber, EmailSubject, YourMessage,Date) VALUES (?, ?, ?, ?, ?,current_timestamp())");
-        $stmt->bind_param("ssiss", $FullName, $EmailAddress, $Mobilenumber, $EmailSubject, $YourMessage);
+        $stmt = $conn->prepare("INSERT INTO Contact(Username,Password,Date) VALUES (?, ?, ?, ?, ?,current_timestamp())");
+        $stmt->bind_param("ss", $Username, $Password);
 
         // Execute the statement
         $execval = $stmt->execute();
@@ -26,19 +23,10 @@
         // Making alert
         echo '<script>alert("Thanks")</script>'; 
 
-
-        // Construct email message
-        $to = 'rohitkumar620200@gmail.com';
-        $subject = $EmailSubject;
-        $body = "Name: $FullName\nEmail: $EmailAddress\nMessage: $YourMessage";
-
-        // Send email
-        $mailSent = mail($to, $subject, $body);
-
         // Close the statement and connection
         $stmt->close();
         $conn->close();
 
-        include "index.html";
+        // include "index.html";
     }
 ?>
