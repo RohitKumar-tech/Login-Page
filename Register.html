@@ -9,7 +9,7 @@
 
 </head>
 <body>
-    <form>
+    <form action="connect.php" method="post">
         <fieldset>
             <h1>Register to Spotify</h1>
             <label for="Name">
@@ -39,14 +39,16 @@
 
             <label for="Confirm_password">
                 <i class='bx bx-lock-alt' ></i>
-                <input id="Confirm_password" name="Confirm_password" type="password" pattern="[a-z0-5]{8,}" placeholder="Password" required/>
+                <input id="Confirm_password" name="Confirm_password" type="password" pattern="[a-z0-5]{8,}" placeholder="Confirm Password" required/>
             </label>
 
             <p>By registering here , you agree to our <a href="terms_and_condition.html"> Terms and Conditons</a></p>
 
-            <button>Register</button>
+            <div class="btn-box btns">
+                <button type="submit" class="btn">Register</button>
+            </div>
 
-            <p>Already have an account ?  <a href="sign_in.html"> Login</a></p>
+            <p>Already have an account ?<a href="sign_in.html"> Login</a></p>
             
         </fieldset>        
         <script src="Javascript/main.js"></script> 

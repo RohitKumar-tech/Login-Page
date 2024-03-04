@@ -2,7 +2,7 @@ body {
   color: #f5f6f7;
   font-family: Tahoma;
   font-size: 16px;
-  background-image: url("bg.webp");
+  background-image: url("../bg.webp");
   margin: 0; /* Added to remove default body margin */
   display: flex; /* Added to center form */
   justify-content: center; /* Added to center form horizontally */
@@ -19,7 +19,8 @@ form {
   margin-top: 10%; /* You can adjust this margin */
   padding: 10px;
   background-color: black;
-  box-shadow: 2px 2px 80px #ffffff;
+  box-shadow: 2px 2px 60px #ffffff;
+  border-radius: 20px;
 }
 
 /* Rest of your CSS remains the same */
