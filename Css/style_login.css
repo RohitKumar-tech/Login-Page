@@ -1,0 +1,83 @@
+body {
+  color: #f5f6f7;
+  font-family: Tahoma;
+  font-size: 16px;
+  background-image: url("bg.webp");
+  margin: 0; /* Added to remove default body margin */
+  display: flex; /* Added to center form */
+  justify-content: center; /* Added to center form horizontally */
+  align-items: center; /* Added to center form vertically */
+  height: 40%; /* Added to make sure form is centered in viewport */
+}
+
+form {
+  display: flex;
+  flex-direction: column; /* Changed to column for better layout */
+  justify-content: center;
+  align-items: center;
+  width: 60vw;
+  margin-top: 10%; /* You can adjust this margin */
+  padding: 10px;
+  background-color: black;
+  box-shadow: 2px 2px 80px #ffffff;
+}
+
+/* Rest of your CSS remains the same */
+
+h1,p{
+  display: flex;
+  flex: wrap;
+  margin: 10px auto;
+  justify-content: center;
+  align-items: center;
+}
+
+fieldset {
+  border: none;
+  padding: 10px 0;
+}
+
+label {
+  display: block;
+  margin: 5px 5px;
+}
+
+input{
+  margin: 10px 0 0 0;
+  width: 90%;
+  min-height: 25px;
+}
+
+input {
+  background-color: #0a0a23;
+  border: 1px solid #0a0a23;
+  color: #ffffff;
+}
+
+button {
+  display: flex;
+  flex: wrap;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  padding: 5px;
+  background-color: greenyellow;
+  border: 1px solid greenyellow;
+  border-radius: 22px;
+  color: #0a0a23;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+}
+
+a:hover {
+  color: aqua;
+}
+
