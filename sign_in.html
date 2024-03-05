@@ -9,7 +9,7 @@
 
 </head>
 <body>
-    <form action="connect.php" method="post">
+    <form method="post" action="login.php">
         <fieldset>
             <h1>Login in to <span>Spotify</span></h1>
 
@@ -20,7 +20,7 @@
 
             <label for="Password">
                 <i class='bx bx-lock-alt' ></i>
-                <input id="Password" name="Password" type="password" pattern="[a-z0-5]{8,}" placeholder="Password" required/>
+                <input id="Password" name="Password" type="password" pattern="[a-zA-Z0-9]{8,}" placeholder="Password" required/>
             </label>
 
             <p>By registering here , you agree to our <a href="terms_and_condition.html">Terms and Conditons</a></p>
